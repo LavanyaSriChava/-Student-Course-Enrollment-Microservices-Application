@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false  # disable auto-routing
+      routes:
+        - id: student-service
+          uri: lb://student-service
+          predicates:
+            - Path=/students/**
+        - id: course-service
+          uri: lb://course-service
+          predicates:
+            - Path=/courses/**
+        - id: enrollment-service
+          uri: lb://enrollment-service
+          predicates:
+            - Path=/enrollments/**
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/payments/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.netty: DEBUG
