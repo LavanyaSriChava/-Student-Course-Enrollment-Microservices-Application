@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="087f0303-6df9-496e-a37f-dd0278a856d5" name="Changes" comment="" />
+    <list default="true" id="087f0303-6df9-496e-a37f-dd0278a856d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/example/courseservice/CourseServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/example/courseservice/controller/CourseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/example/courseservice/model/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/java/com/example/courseservice/repository/CourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/course-service/src/test/java/com/example/courseservice/CourseServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student-service/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseservice/CourseServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseservice/controller/CourseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseservice/model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseservice/repository/CourseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2zPDcLWeqA68wsQVFWMXG22de5k" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,8 +54,15 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/lavan/OneDrive/Desktop/student-course-microservices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -41,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751623893220</updated>
       <workItem from="1751623894334" duration="32000" />
+      <workItem from="1782665302254" duration="2775000" />
     </task>
     <servers />
   </component>

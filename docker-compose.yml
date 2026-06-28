@@ -1,0 +1,75 @@
+
+
+services:
+
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - microservice-network
+
+  gateway-service:
+    build: ./gateway-service
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    environment:
+      EUREKA_SERVER_URL: http://eureka-server:8761/eureka
+    depends_on:
+      - eureka-server
+    networks:
+      - microservice-network
+
+  student-service:
+    build: ./student-service
+    container_name: student-service
+    ports:
+      - "8081:8081"
+    environment:
+      EUREKA_SERVER_URL: http://eureka-server:8761/eureka
+    depends_on:
+      - eureka-server
+    networks:
+      - microservice-network
+
+  course-service:
+    build: ./course-service
+    container_name: course-service
+    ports:
+      - "8082:8082"
+    environment:
+      EUREKA_SERVER_URL: http://eureka-server:8761/eureka
+    depends_on:
+      - eureka-server
+    networks:
+      - microservice-network
+
+  enrollment-service:
+    build: ./enrollment-service
+    container_name: enrollment-service
+    ports:
+      - "8083:8083"
+    environment:
+      EUREKA_SERVER_URL: http://eureka-server:8761/eureka
+    depends_on:
+      - eureka-server
+    networks:
+      - microservice-network
+
+  payment-service:
+    build: ./payment-service
+    container_name: payment-service
+    ports:
+      - "8084:8084"
+    environment:
+      EUREKA_SERVER_URL: http://eureka-server:8761/eureka
+    depends_on:
+      - eureka-server
+    networks:
+      - microservice-network
+
+networks:
+  microservice-network:
+    driver: bridge
