@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
@@ -15,7 +15,7 @@ public class StudentController {
     private StudentRepository studentRepository;
 
     @PostMapping
-    public Student addStudent(@RequestBody Student student) {
+    public Student addStudent(@Valid @RequestBody Student student) {
         System.out.println("Incoming: " + student);
         Student newStudent = Student.builder()
                 .name(student.getName())

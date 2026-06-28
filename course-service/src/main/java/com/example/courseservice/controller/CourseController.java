@@ -4,7 +4,7 @@ import com.example.courseservice.model.Course;
 import com.example.courseservice.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -15,7 +15,7 @@ public class CourseController {
     private CourseRepository courseRepository;
 
     @PostMapping
-    public Course addCourse(@RequestBody Course course) {
+    public Course addCourse(@Valid @RequestBody Course course) {
         return courseRepository.save(course);
     }
 

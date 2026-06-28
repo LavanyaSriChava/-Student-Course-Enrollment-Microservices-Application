@@ -8,6 +8,7 @@ import com.example.paymentservice.dto.StudentDTO;
 import com.example.paymentservice.model.Payment;
 import com.example.paymentservice.repository.PaymentRepository;
 import lombok.RequiredArgsConstructor;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -24,7 +25,7 @@ public class PaymentController {
     private final CourseClient courseClient;
 
     @PostMapping
-    public Payment makePayment(@RequestBody Payment paymentRequest) {
+    public Payment makePayment(@RequestBody @Valid Payment paymentRequest) {
         Payment payment = Payment.builder()
                 .studentId(paymentRequest.getStudentId())
                 .courseId(paymentRequest.getCourseId())
@@ -69,7 +70,7 @@ public class PaymentController {
 
     // ✅ Inter-service test endpoint
     @GetMapping("/info/{studentId}/{courseId}")
-    public String getPaymentInfo(@PathVariable Long studentId, @PathVariable Long courseId) {
+    public String getPaymentInfo(@PathVariable  Long studentId, @PathVariable Long courseId) {
         StudentDTO student = studentClient.getStudentById(studentId);
         CourseDTO course = courseClient.getCourseById(courseId);
 
